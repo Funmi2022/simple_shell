@@ -3,9 +3,9 @@
 /**
  * interactive - returns true if shell is interactive mode
  * @info: struct address
- *
  * Return: 1 if interactive mode, 0 otherwise
  */
+
 int interactive(info_t *info)
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
@@ -17,16 +17,21 @@ int interactive(info_t *info)
  * @delim: the delimeter string
  * Return: 1 if true, 0 if false
  */
+
 int is_delim(char c, char *delim)
 {
+
 	while (*delim)
+
 		if (*delim++ == c)
+
 			return (1);
+
 	return (0);
 }
 
 /**
- * _isalpha - checks for alphabetic character
+ *_isalpha - checks for alphabetic character
  *@c: The character to input
  *Return: 1 if c is alphabetic, 0 otherwise
  */
